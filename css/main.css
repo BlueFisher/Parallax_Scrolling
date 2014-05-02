@@ -1,0 +1,382 @@
+/*
+ * Copyright 2013 视差滚动网页创新小组
+ * 代码作者 : Fisher
+ * 全局css
+ */
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+@font-face {
+	/* http://fontawesome.io/ */
+	font-family: 'FontAwesome';
+	src: url('fonts/fontawesome-webfont.eot?v=4.0.3');
+	src: url('fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'),
+		 url('fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'),
+		 url('fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'),
+		 url('fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+}
+body {
+	color: #434a54;
+	font-family: Microsoft YaHei, SimSun;
+	overflow: hidden;
+}
+h1,h2,h3,h4,h5,h6{
+	font-weight: 100;
+}
+h1{
+	font-size: 45px;
+	margin-bottom: 25px;
+}
+h1:before{
+	font-family: FontAwesome;
+	margin-right: 10px;
+}
+h2{
+	margin-bottom: 20px;
+	font-size: 32px;
+}
+h3{
+	font-size: 30px;
+	text-indent: 2em;
+}
+h4{
+	margin-top: 10px;
+	margin-bottom: 15px;
+	font-size: 26px;
+}
+p{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	text-indent: 2em;
+	line-height: 30px;
+}
+ol{
+	margin-bottom: 10px;
+	padding-left: 4em;
+	font-size: 18px;
+	line-height: 30px;
+}
+.noindent{
+	text-indent: 0;
+}
+.center{
+	text-align: center;
+	text-indent: 0;
+}
+section{
+	position: relative;
+	float: left;
+	margin-top: -300px;
+	padding-left: 100px;
+	height: 600px;
+	top: 50%;
+}
+section.subsection{
+	padding-top: 83px;
+	padding-left: 25px;
+	max-width: 600px;
+}
+#debug{
+	position: absolute;
+	z-index: 99999;
+}
+.parallaxLayer{
+	transition: all 0.3s ease;
+}
+
+a.btn_block{
+	display: block;
+	margin-bottom: 25px;
+	padding: 0 5px;
+	min-width: 280px;
+	height: 100px;
+	text-decoration: none;
+	color: #F5F7FA;
+	line-height: 100px;
+	font-size: 28px;
+	text-align: center;
+	border-radius: 5px;
+	background-image:url('../image/button_bg.png');
+	box-shadow:0 0 1px #fff inset;
+	transition: background 0.2s;
+}
+a.btn_block.blue{
+	color:#0f4b6d;
+	border:1px solid #84acc3;
+	background-color: #48b5f2;
+}
+a.btn_block.blue:hover{
+	background-color:#63c7fe;
+}
+a.btn_block.green{
+	color:#345903;
+	border:1px solid #96a37b;
+	background-color: #79be1e;
+}
+a.btn_block.green:hover{
+	background-color:#89d228;
+}
+a.btn_block.orange{
+	color:#693e0a;
+	border:1px solid #bea280;
+	background-color: #e38d27;
+}
+a.btn_block.orange:hover{
+	background-color:#ec9732;
+}
+a.btn_block.gray{
+	color:#525252;
+	border:1px solid #a5a5a5;	
+	background-color: #a9adb1;
+}
+a.btn_block.gray:hover{
+	background-color:#b6bbc0;
+}
+a.btn_block.purple{
+	color:#493B6B;
+	border:1px solid #A5A5A5;	
+	background-color: #967ADC;
+}
+a.btn_block.purple:hover{
+	background-color:#A78EE6;
+}
+
+#container{
+	position: absolute;
+	width: 20000px;
+	height: 100%;
+}
+.mainBlock{
+	position: relative;
+	float: left;
+	overflow: hidden;
+	height: 100%;
+}
+
+/******************************  HOME  ******************************/
+
+#home{
+	width: 2000px;
+	background: red;
+}
+#home_bg{
+	width: 100%;
+	height: 100%;
+	background: #F3F3F3;
+}
+#home #author{
+	z-index: 2;
+	position: absolute;
+	bottom: 10px;
+}
+#home #author p{
+	margin: 0 0 0 10px;
+	padding: 0;
+	text-indent: 0;
+}
+
+#home #author p:nth-child(1):before{
+	font-family: FontAwesome;
+	content: "\F121";
+	margin-right: 10px;
+}
+#home #author p:nth-child(2):before{
+	font-family: FontAwesome;
+	content: "\F040";
+	margin-right: 13px;
+}
+#home #author p:nth-child(3):before{
+	font-family: FontAwesome;
+	content: "\F03E";
+	margin-right: 9px;
+}
+#residential_logo{
+	position: absolute;
+	z-index: 1;
+	margin-left: -429.5px;
+	margin-top: -73px;
+	top: 50%;
+	left: 50%;
+}
+
+/******************************  GALLERY  ******************************/
+
+#gallery{
+	z-index: 2;
+	width: 1200px;
+	background: #F3F3F3;
+}
+#gallery h1{
+	position: absolute;
+	margin: 200px 0 0 20px;
+}
+#gallery h1:before{
+	content: "\F03E";
+}
+#gallery img{
+	width: 200px;
+	height: 120px;
+	background: blue;
+}
+#gallery > a{
+	float: left;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	width: 200px;
+	height: 120px;
+}
+#gallery > a div{
+	position: absolute;
+	padding: 10px;
+	width: 200px;
+	height: 120px;
+	background: rgba(0,0,0,0.5);
+	left: 0;
+	top: 0;
+	opacity: 0;
+	transition: opacity 0.2s;
+}
+#gallery > a:hover div{
+	opacity: 1;
+}
+#gallery > a div p{
+	color: white;
+}
+#imgscroll{
+	position: relative;
+	float: left;
+	margin-left: 200px;
+	width: 800px;
+	height: 480px;
+	overflow: hidden;
+	background: black;
+}
+#imgscroll ul {
+	position: absolute;
+	width: 4000px;
+	list-style-type: none;
+	left: 0px;
+	transition: left 1s;
+}
+#imgscroll ul li {
+	float: left;
+}
+#imgscroll ul li img {
+	opacity: 0.25;
+	transition: opacity 0.3s;
+	width: 800px;
+	height: 480px;
+}
+#imgscroll a {
+	display: block;
+	position: absolute;
+	height: 100%;
+	width: 200px;
+	background: white;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+#imgscroll a:hover {
+	opacity: 0.25;
+}
+#imgscrollLeft {
+	left: 0;
+}
+#imgscrollRight {
+	right: 0;
+}
+
+/******************************  INTRODUCTION  ******************************/
+#introduction{
+	/*width: 7700px;*/
+	background: #F3F3F3;
+}
+#introduction_bg{
+	
+}
+
+#s_briefIntro h1:before{
+	content: "\F02C";
+}
+#s_briefIntro .content{
+	width: 850px;
+}
+
+#emblem{
+	position: absolute;
+	margin-top: -194.5px;
+	top: 50%;
+	left: 1000px;
+}
+
+#s_emblemIntro{
+	padding-left: 350px;
+}
+#s_emblemIntro h1:before{
+	content: "\F091";
+}
+#s_emblemIntro .content{
+	width: 500px;
+}
+
+#s_words h1:before{
+	content: "\F086";
+}
+#s_words .content{
+	width: 800px;
+}
+#signature{
+	padding: 50px;
+	float: right;
+}
+
+#s_tutor h1:before{
+	content: "\F0C0";
+}
+
+#s_contact{
+	width: 625px;
+}
+#s_contact h1:before{
+	content: "\F041";
+}
+#s_contact a.btn_block{
+	float: left;
+	margin-right: 20px;
+}
+
+#s_cultivation h1:before{
+	content: "\F087";
+}
+#s_cultivation .content{
+	width: 550px;
+}
+
+/******************************  LINKS  ******************************/
+
+#links{
+	background: #F3F3F3;
+	padding-right: 50px;
+}
+#links h1:before{
+	content: "\F127";
+}
+#links a.btn_block:before{
+	font-family: FontAwesome;
+	margin-right: 10px;
+	content: "\F041"
+}
+
+#s_students_info{
+	max-width: 625px;
+	margin-right: -25px;
+}
+#s_students_info a.btn_block{
+	float: left;
+	margin-right: 20px;
+}
